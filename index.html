@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Коротка інформація про GNU/Linux, популярні дистрибутиви, команди CLI, та інтерактивний BASH-скрипт">
+    <title>Світ GNU/Linux</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <header>
+        <div class="container">
+            <h1>GNU/Linux — Майбутнє вільних технологій</h1>
+            <nav>
+                <ul>
+                    <li><a href="#info">Про Linux</a></li>
+                    <li><a href="#distros">Дистрибутиви</a></li>
+                    <li><a href="#commands">Команди</a></li>
+                    <li><a href="#script">Скрипт</a></li>
+                    <li><a href="#sources">Джерела</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="info" class="glass">
+            <h2>Коротка інформація</h2>
+            <p>GNU/Linux — це потужна операційна система з відкритим вихідним кодом, яка популярна завдяки своїй надійності та свободі. Вона використовується як на серверах, так і на робочих станціях і дозволяє користувачам мати повний контроль над своїм середовищем.</p>
+        </section>
+
+        <section id="distros" class="glass">
+            <h2>Найпопулярніші дистрибутиви</h2>
+            <div class="distros-grid">
+                <div class="distro-card">
+                    <h3>Ubuntu</h3>
+                    <p>Зручний для новачків і використовується в бізнесі.</p>
+                </div>
+                <div class="distro-card">
+                    <h3>Fedora</h3>
+                    <p>Для тих, хто прагне нових технологій і стабільності.</p>
+                </div>
+                <div class="distro-card">
+                    <h3>Arch Linux</h3>
+                    <p>Максимальна гнучкість для досвідчених користувачів.</p>
+                </div>
+                <div class="distro-card">
+                    <h3>Debian</h3>
+                    <p>Стабільний та надійний вибір для серверів.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="commands" class="glass">
+            <h2>Основні команди Linux CLI</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Команда</th>
+                        <th>Опис</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>pwd</code></td>
+                        <td>Виводить поточну директорію.</td>
+                    </tr>
+                    <tr>
+                        <td><code>ls</code></td>
+                        <td>Перегляд файлів у директорії.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cd</code></td>
+                        <td>Переміщення між директоріями.</td>
+                    </tr>
+                    <tr>
+                        <td><code>touch</code></td>
+                        <td>Створення нового файлу.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mkdir</code></td>
+                        <td>Створення нової директорії.</td>
+                    </tr>
+                    <tr>
+                        <td><code>cp</code></td>
+                        <td>Копіювання файлів і папок.</td>
+                    </tr>
+                    <tr>
+                        <td><code>mv</code></td>
+                        <td>Переміщення або перейменування файлів.</td>
+                    </tr>
+                    <tr>
+                        <td><code>rm</code></td>
+                        <td>Видалення файлів.</td>
+                    </tr>
+                    <tr>
+                        <td><code>history</code></td>
+                        <td>Перегляд історії команд.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="script" class="glass">
+            <h2>Інтерактивний BASH-скрипт</h2>
+            <div id="terminal">
+                <pre><code>
+#!/bin/bash
+
+# Авторизація
+correct_user="admin"
+correct_password="password123"
+
+echo "Введіть ім'я користувача:"
+read user
+
+echo "Введіть пароль:"
+read -s password
+
+if [[ $user == $correct_user && $password == $correct_password ]]; then
+    echo "Вітаємо, $user!"
+else
+    echo "Невірні дані!"
+fi
+                </code></pre>
+            </div>
+        </section>
+
+        <section id="sources" class="glass">
+            <h2>Джерела</h2>
+            <ul>
+                <li><a href="https://www.gnu.org/">GNU.org</a></li>
+                <li><a href="https://www.linux.org/">Linux.org</a></li>
+                <li><a href="https://kernel.org/">Kernel.org</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Світ GNU/Linux. Всі права захищені.</p>
+    </footer>
+
+    <!-- Скрипт для частинок на фоні -->
+    <script src="particles.js"></script>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('particles.js config loaded');
+        });
+    </script>
+
+</body>
+</html>
